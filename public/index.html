@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fbf8f4" />
+    <meta name="description" content="Des gâteaux faits avec amour pour les jolis jours. Découvrez les créations artisanales de Maison Sucrée." />
+    <title>Maison Sucrée — Des gâteaux pour les jolis jours</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <div class="announcement">Gâteaux préparés à la commande <span aria-hidden="true">✳</span> Retrait à l’atelier ou livraison à Paris</div>
+    <header class="site-header">
+      <a class="wordmark" href="#accueil" aria-label="Maison Sucrée, accueil">maison <span>sucrée</span><i aria-hidden="true">.</i></a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#creations">Nos créations</a>
+        <a href="#histoire">Notre histoire</a>
+        <a href="#sur-mesure">Sur mesure</a>
+      </nav>
+      <button class="cart-trigger" id="open-cart" aria-label="Ouvrir le panier">
+        <span>Mon panier</span><span class="cart-count" id="cart-count">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="accueil">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-line"></span> Pâtisserie artisanale · Paris</span>
+          <h1>Les jolis jours<br />méritent un <em>gâteau.</em></h1>
+          <p>Des créations généreuses, imaginées avec le cœur et préparées à la main pour vos moments qui comptent.</p>
+          <a class="button button-dark" href="#creations">Découvrir nos gâteaux <span aria-hidden="true">↗</span></a>
+          <div class="hero-note"><span class="note-stars">★★★★★</span><span>Faits avec amour, depuis 2018</span></div>
+        </div>
+        <div class="hero-image" role="img" aria-label="Gâteau d'anniversaire fleuri préparé artisanalement">
+          <div class="image-caption"><span>La pièce montée<br />« Douceur de mai »</span><span class="caption-arrow">↗</span></div>
+          <span class="hero-sticker"><span>fait<br />avec</span><strong>♥</strong><span>amour</span></span>
+        </div>
+        <div class="hero-index">01 <span></span> 03</div>
+      </section>
+
+      <section class="intro-strip" id="histoire">
+        <span class="intro-flower" aria-hidden="true">✳</span>
+        <p>De la première bouchée au dernier souvenir, <em>on célèbre tout ce qui vous rassemble.</em></p>
+        <span class="intro-signature">Clara, fondatrice</span>
+      </section>
+
+      <section class="shop-section" id="creations">
+        <div class="section-heading">
+          <div><span class="eyebrow">Le menu des réjouissances</span><h2>Nos <em>créations</em></h2></div>
+          <p>Chaque gâteau est préparé à la commande<br />avec de bons ingrédients et beaucoup d’amour.</p>
+        </div>
+        <div class="shop-toolbar">
+          <div class="filters" role="group" aria-label="Filtrer les gâteaux">
+            <button class="filter-chip active" data-category="Tous">Tout voir <span>06</span></button>
+            <button class="filter-chip" data-category="Anniversaire">Anniversaire</button>
+            <button class="filter-chip" data-category="Mariage">Mariage</button>
+            <button class="filter-chip" data-category="À partager">À partager</button>
+          </div>
+          <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Une envie précise ?" aria-label="Rechercher un gâteau" /></label>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="custom-banner" id="sur-mesure">
+        <div class="custom-image" role="img" aria-label="Gâteau de mariage décoré de fleurs fraîches"></div>
+        <div class="custom-copy">
+          <span class="eyebrow">Une grande occasion en vue ?</span>
+          <h2>Un gâteau<br />rien qu’à <em>vous.</em></h2>
+          <p>Couleurs, saveurs, fleurs et petits détails : imaginons ensemble le gâteau qui vous ressemble.</p>
+          <a class="button button-outline" href="mailto:bonjour@maisonsucree.fr?subject=Mon%20g%C3%A2teau%20sur%20mesure">Parlons de votre projet <span aria-hidden="true">↗</span></a>
+        </div>
+        <span class="custom-asterisk" aria-hidden="true">✳</span>
+      </section>
+
+      <section class="promise-row" aria-label="Nos engagements">
+        <div><span class="promise-icon">✳</span><h3>Fait maison</h3><p>Préparé à la main dans notre atelier parisien.</p></div>
+        <div><span class="promise-icon">♡</span><h3>Ingrédients choisis</h3><p>De saison, locaux et toujours de qualité.</p></div>
+        <div><span class="promise-icon">✿</span><h3>Fait pour vous</h3><p>Chaque création est unique, comme votre histoire.</p></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark footer-wordmark" href="#accueil">maison <span>sucrée</span><i>.</i></a>
+      <p>Les jolis jours, depuis 2018.</p>
+      <span>Paris, France · <a href="mailto:bonjour@maisonsucree.fr">bonjour@maisonsucree.fr</a></span>
+    </footer>
+
+    <div class="overlay" id="overlay" hidden></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Votre panier" aria-hidden="true">
+      <div class="drawer-header"><div><span class="eyebrow">Le bonheur est tout près</span><h2>Votre panier</h2></div><button class="icon-button" id="close-cart" aria-label="Fermer le panier">×</button></div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-empty" id="cart-empty"><span>♡</span><p>Votre panier attend sa première douceur.</p><button class="text-link" id="continue-shopping">Découvrir les gâteaux ↗</button></div>
+      <div class="cart-bottom" id="cart-bottom" hidden>
+        <div class="subtotal"><span>Sous-total</span><strong id="cart-subtotal">0 €</strong></div>
+        <p class="delivery-note">Livraison et retrait à convenir lors de la commande.</p>
+        <button class="button button-dark checkout-button" id="checkout-button">Passer commande <span aria-hidden="true">↗</span></button>
+      </div>
+    </aside>
+
+    <dialog class="checkout-dialog" id="checkout-dialog">
+      <div class="dialog-header"><div><span class="eyebrow">Encore une petite étape</span><h2>Votre commande</h2></div><button class="icon-button" id="close-checkout" aria-label="Fermer">×</button></div>
+      <div id="checkout-content">
+        <p class="dialog-intro">Dites-nous où vous joindre et quand vous souhaitez retrouver vos douceurs.</p>
+        <form id="checkout-form">
+          <label>Votre nom<input name="name" autocomplete="name" required maxlength="80" placeholder="Camille Dupont" /></label>
+          <label>Votre e-mail<input name="email" type="email" autocomplete="email" required maxlength="120" placeholder="camille@exemple.fr" /></label>
+          <label>Date souhaitée<input name="date" type="date" required /></label>
+          <label>Un petit mot <span class="optional">(facultatif)</span><textarea name="message" rows="3" maxlength="500" placeholder="Allergies, message personnalisé…"></textarea></label>
+          <div class="dialog-total"><span>Total estimé</span><strong id="checkout-total">0 €</strong></div>
+          <div id="paypal-buttons" aria-label="Paiement sécurisé avec PayPal"></div>
+          <p class="form-disclaimer">Le paiement sécurisé est traité par PayPal. Les frais de livraison ou de retrait seront confirmés par l’atelier.</p>
+          <p class="payment-status" id="payment-status" role="status" aria-live="polite">Chargement des options de paiement…</p>
+        </form>
+      </div>
+      <div class="order-success" id="order-success" hidden>
+        <span class="success-heart">♡</span><h3>Merci, <span id="customer-name"></span> !</h3>
+        <p id="payment-confirmation"></p>
+        <p class="order-recipient">Pour transmettre les détails à l’atelier : <strong id="workshop-email"></strong></p>
+        <a class="button button-dark checkout-button" id="send-order" href="#" target="_blank" rel="noopener noreferrer">Ouvrir Gmail pour envoyer <span aria-hidden="true">↗</span></a>
+        <button class="button button-outline checkout-button" id="copy-order" type="button">Copier le récapitulatif</button>
+        <a class="text-link order-mailto" id="mailto-order" href="#">Ouvrir mon logiciel de messagerie</a>
+        <button class="button button-dark checkout-button" id="finish-order">Continuer la visite</button>
+      </div>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
